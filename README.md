@@ -1,1 +1,1 @@
-# mygamemodule.com
+# mygamemodule.github.io
