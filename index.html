@@ -8,29 +8,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p id="instructions">collect all gold <br>
-        without touching any blacks <br>
-        and safely reach to green</p>
-    <p id="score">gold: 0</p>
+    <p id="instructions">1. Collect all gold.<br>
+        2. Avoid contact with <br id="break"> the spiked wheels.<br>
+        3. Safely reach to Home.</p>
+    <p id="score">Gold: 0</p>
     <p id="lives">Lives left: 3</p>
     <p id="status">status</p>
     <div class="container">
-        <div class="hero"></div>
+        <canvas id="canvas" class="hero"></canvas>
         <span class="home"></span>
         <span class="gold gone"></span>
         <span class="gold gtwo"></span>
         <span class="gold gthree"></span>
-        <span class="villain one"></span>
-        <span class="villain two"></span>
-        <span class="villain three"></span>
-        <span class="villain four"></span>
-        <span class="villain five"></span>
-        <span class="villain six"></span>
-        <span class="villain seven"></span>
-        <span class="villain eight"></span>
-        <span class="villain nine"></span>
-        <span class="villain ten"></span>
+        <canvas class="canvas1 villain one"></canvas>
+        <canvas class="canvas1 villain two"></canvas>
+        <canvas class="canvas1 villain three"></canvas>
+        <canvas class="canvas1 villain four"></canvas>
+        <canvas class="canvas1 villain five"></canvas>
+        <canvas class="canvas1 villain six"></canvas>
+        <canvas class="canvas1 villain seven"></canvas>
+        <canvas class="canvas1 villain eight"></canvas>
+        <canvas class="canvas1 villain nine"></canvas>
+        <canvas class="canvas1 villain ten"></canvas>
     </div>
+        <button id="up" class="btn">U</button>
+        <button id="down" class="btn">D</button>
+        <button id="left" class="btn">L</button>
+        <button id="right" class="btn">R</button>
+    <img id="image1" src="images/enemy4.png" style="display:none;">
+    <img id="image2" src="images/enemy3.png" style="display:none;">
     <script src="scripts.js"></script>
 </body>
 </html>
