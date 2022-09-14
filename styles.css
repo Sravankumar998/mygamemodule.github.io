@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -27,28 +28,117 @@ p{
 }
 
 #lives{
-    top: 25%;
+    top: 30%;
+    left: 13%;
     height: 25px;
     width: 100px;
     font-size: 18px;
 }
 
 #score{
+    top: 50%;
+    left: 13%;
     height: 25px;
     font-size: large;
 }
 
 #status{
-    top: 30%;
+    top: 40%;
+    left: 13%;
 }
 
 .container{
     position: relative;
-    background: #fff;
-    height: 45vw;
-    width: 45vw;
+    height: 95vh;
     z-index: -1;
+    background-image: url('images/background2.jfif');
+    background-size: 45vw 45vw;
+    aspect-ratio: 1;
 }
+
+
+.btn{
+    display: none;
+}
+
+@media only screen and (max-width:500px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .container{
+        position: absolute;
+        top: 11%;
+        height: 95vw;
+        background-size: 95vw 95vw;
+        aspect-ratio: 1;
+    }
+
+    #instructions{
+        top: 1%;
+        left: 3%;
+    }
+
+    #break{
+        display: none;
+    }
+    
+    #lives{
+        top: 72%;
+        left: 3%;
+        height: 25px;
+        width: 100px;
+        font-size: 18px;
+    }
+    
+    #score{
+        position: absolute;
+        top: 72%;
+        left: 75%;
+        height: 25px;
+        font-size: large;
+    }
+    
+    #status{
+        top: 72%;
+        left: 50%;
+    }
+
+    .btn{
+        display: inherit;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        width: 10%;
+        aspect-ratio: 1;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .btn:active{
+        color: red;
+    }
+
+    #up{
+        top: 80%;
+        left: 50%;
+    }
+
+    #down{
+        top: 90%;
+        left: 50%;
+    }
+    #left{
+        top: 85%;
+        left: 25%;
+    }
+    #right{
+        top: 85%;
+        left: 75%;
+    }
+}
+
 
 .hero{
     position: absolute;
@@ -56,15 +146,26 @@ p{
     width: 10%;
     top: 90%;
     left: 0%;
-    background: red;
     z-index: 0;
+    filter: sepia(100%) invert(20%) brightness(200%) hue-rotate(90deg) saturate(3);
 }
+
 
 .gold{
     position: absolute;
-    height: 5%;
-    width: 5%;
-    background-color: yellow;
+    height: 3.5%;
+    width: 3.5%;
+    font-size: 100%;
+    border-radius: 10%;
+    background-image: linear-gradient(145deg,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+    );
     z-index: -2;
 }
 
@@ -74,7 +175,8 @@ p{
     width: 10%;
     top: 0%;
     left: 90%;
-    background: green;
+    background-image: url('images/home-clip-art-modern-house-8.png');
+    background-size: 100% 100%;
     z-index: 1;
 }
 
@@ -82,7 +184,7 @@ p{
     position: absolute;
     height: 10%;
     width: 10%;
-    background: #000;
+    background: none;
     z-index: 3;
 }
 
